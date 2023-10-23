@@ -37,6 +37,13 @@ public class VizitkaController {
         return result;
     }
 
+    @PostMapping("detail/{id}")
+    public String deleteById(@PathVariable int id) {
+        service.deleteById(id);
+        return "redirect:/";
+    }
+
+
     @GetMapping("/nova")
     public ModelAndView nova() {
         return new ModelAndView("nova");

@@ -7,6 +7,7 @@
 <body>
 <div class="detail">
     <div class="vizitka">
+        <div></div>
         <div class="jmeno"> ${(vizitka.jmeno)!""} </div>
         <div class="firma">${(vizitka.firma)!""}</div>
         <div class="udaje">
@@ -29,6 +30,11 @@
 
     <nav>
         <a href="/">◂ zpět na seznam</a>
+        <form class="row g-3" method="post" action="/detail/${id}">
+            <input type="hidden" id="index" value="${id}" title="hidden id">
+            <button type="submit" class="btn btn-secondary"><i class="bi bi-person-x-fill" role="img"
+                                                               aria-label="Delete"></i></button>
+        </form>
     </nav>
 </div>
 </body>
